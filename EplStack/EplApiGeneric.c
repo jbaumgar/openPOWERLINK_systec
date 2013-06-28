@@ -3119,7 +3119,7 @@ tEplApiEventArg EventArg;
     }
 
 #if (((EPL_MODULE_INTEGRATION) & (EPL_MODULE_CFM)) != 0)
-    Ret = EplCfmuProcessNodeEvent(uiNodeId_p, NodeEvent_p);
+    Ret = EplCfmuProcessNodeEvent(uiNodeId_p, NodeEvent_p, NmtState_p);
 #endif
 
 Exit:
