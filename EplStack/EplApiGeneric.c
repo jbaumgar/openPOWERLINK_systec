@@ -3113,7 +3113,9 @@ tEplApiEventArg EventArg;
     Ret = EplApiInstance_g.m_InitParam.m_pfnCbEvent(kEplApiEventNode,
                                                     &EventArg,
                                                     EplApiInstance_g.m_InitParam.m_pEventUserArg);
-    if (Ret != kEplSuccessful)
+    if (((NodeEvent_p == kEplNmtNodeEventCheckConf)
+        || (NodeEvent_p == kEplNmtNodeEventUpdateConf))
+        && (Ret != kEplSuccessful))
     {
         goto Exit;
     }
